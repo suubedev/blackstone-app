@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.suubedev.blackstonesimulator.MainActivity"
+    android:background="#000000">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/blackdesertbanner"
+        android:layout_alignEnd="@+id/linearLayout" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/imageView"
+        android:background="#ffffff"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"></LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/bdoface"
+        android:layout_marginEnd="43dp"
+        android:layout_alignTop="@+id/plusSign"
+        android:layout_alignEnd="@+id/failStacks" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="+"
+        android:id="@+id/plusSign"
+        android:textColor="#ffffff"
+        android:textIsSelectable="false"
+        android:textSize="70dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toStartOf="@+id/currentRank"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/currentRank"
+        android:textColor="#ffffff"
+        android:textSize="70dp"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/plusSign"
+        android:layout_toEndOf="@+id/enchantButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Failstacks :"
+        android:id="@+id/failStacks"
+        android:layout_marginTop="15dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignStart="@+id/enchantButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/failstackCount"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/failStacks"
+        android:layout_toEndOf="@+id/stonesUsed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/stoneCount"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/failstackCount"
+        android:layout_toEndOf="@+id/failstackCount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Stones Used:"
+        android:textColor="#ffffff"
+        android:id="@+id/stonesUsed"
+        android:layout_above="@+id/enchantButton"
+        android:layout_alignStart="@+id/failStacks" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enchantButton"
+        android:src="@drawable/bodappbutton"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/stoneCount"
+        android:layout_alignStart="@+id/resetButton" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetButton"
+        android:src="@drawable/resetbutton"
+        android:layout_below="@+id/enchantButton"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/historyButton"
+        android:layout_below="@+id/resetButton"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/history"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcMain"
+        android:layout_below="@+id/historyButton"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/calc"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Good Luck!"
+        android:id="@+id/successChance"
+        android:textColor="#fff"
+        android:layout_below="@+id/plusSign"
+        android:layout_alignEnd="@+id/currentRank" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+15"
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:textColor="#fff"
+        android:enabled="true"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:buttonTint="#fff"
+        android:layout_alignTop="@+id/enchantButton"
+        android:layout_toEndOf="@+id/enchantButton"
+        android:layout_above="@+id/resetButton"
+        />
+
+</RelativeLayout>
